@@ -1,0 +1,23 @@
+[project]
+name = "learn_this_project"
+version = "0.1.1"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "SQLAlchemy>=2.0.33,<3.0.0",
+    "prettytable>=3.15.1,<4.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.0,<8.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["learn_this_project*"]
+exclude = [
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
